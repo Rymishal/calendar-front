@@ -1,10 +1,10 @@
-import {combineReducers, configureStore} from '@reduxjs/toolkit'
-import calendarSlice from "./calendar-slice";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import calendarSlice from './calendar-slice';
 
-const rootReducer = combineReducers({calendarSlice: calendarSlice})
+const rootReducer = combineReducers({ calendarSlice });
 const store = configureStore({
-    reducer: rootReducer
-})
+  reducer: rootReducer,
+});
 
 export default store;
 export type RootState = ReturnType<typeof store.getState>

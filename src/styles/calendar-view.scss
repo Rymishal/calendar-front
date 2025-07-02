@@ -1,0 +1,31 @@
+
+.calendar-view {
+  padding: 1rem;
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+
+    .calendar-day {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      min-height: 80px;
+
+      .event {
+        background: #007bff;
+        color: #fff;
+        margin-top: 0.5rem;
+        padding: 2px 4px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .calendar-controls {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

@@ -1,15 +1,15 @@
 import React, {useEffect} from "react";
 import { useParams, useNavigate } from "react-router";
-import { CalendarEvent } from "../types/Event";
-import EventForm from "./EventForm";
-import "../styles/EventDetailsPage.scss";
+import { CalendarEvent } from "../types/calendar-event";
+import EventForm from "./event-form";
+import "../styles/event-details-page.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../store/store";
 import {deleteEvent, getEvent, getEvents, updateEvent} from "../api/api";
-import {resetEvent, resetState} from "../store/calendarSlice";
+import {resetEvent, resetState} from "../store/calendar-slice";
 import {StatusEnum} from "../types/events-loading-status";
 import LoadingInfo from "./loading-info";
-import ErrorInfo from "./ErrorInfo";
+import ErrorInfo from "./error-info";
 
 const EventDetailsPage = () => {
   const { id } = useParams<{ id: string }>();

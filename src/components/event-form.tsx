@@ -1,6 +1,6 @@
 import React from "react";
 import { CalendarEvent } from "../types/calendar-event";
-import "../styles/EventForm.scss";
+import "../styles/event-form.scss";
 import {useForm, Controller} from "react-hook-form";
 import {useNavigate} from "react-router";
 import {Box, Button, TextField} from "@mui/material";

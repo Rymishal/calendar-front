@@ -1,4 +1,13 @@
-.loadingContainer {
+.loading-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 200px;
+}
+
+.circular-progress {
+  width: 48px !important;
+  height: 48px !important;
+  color: #1976d2;
 }

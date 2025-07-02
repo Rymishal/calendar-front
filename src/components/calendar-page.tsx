@@ -1,16 +1,16 @@
 
 import React, {useState} from "react";
 import { useNavigate } from "react-router";
-import "../styles/CalendarView.scss";
+import "../styles/calendar-view.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../store/store";
 import {getEvents} from "../api/api";
 import {StatusEnum} from "../types/events-loading-status";
-import ErrorInfo from "./ErrorInfo";
+import ErrorInfo from "./error-info";
 import {Button} from "@mui/material";
 import LoadingInfo from "./loading-info";
 
-const CalendarView = () => {
+const CalendarPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const events = useSelector((state: RootState) => state.calendarSlice.events);
   const status = useSelector((state: RootState) => state.calendarSlice.eventsLoadingStatus);
@@ -74,4 +74,4 @@ const CalendarView = () => {
   );
 };
 
-export default CalendarView;
+export default CalendarPage;

@@ -1,15 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { CalendarEvent } from "../types/calendar-event";
-import EventForm from "./EventForm";
-import "../styles/AddEventPage.scss";
-import {createEvent, getEvents} from "../api/api";
+import EventForm from "./event-form";
+import "../styles/add-event-page.scss";
+import {createEvent} from "../api/api";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../store/store";
 import {StatusEnum} from "../types/events-loading-status";
-import {resetError, resetEvent, resetState} from "../store/calendarSlice";
+import {resetError, resetEvent, resetState} from "../store/calendar-slice";
 import LoadingInfo from "./loading-info";
-import ErrorInfo from "./ErrorInfo";
+import ErrorInfo from "./error-info";
 
 const AddEventPage = () => {
   const navigate = useNavigate();
